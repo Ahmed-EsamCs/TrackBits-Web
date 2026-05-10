@@ -80,13 +80,12 @@ The web platform follows:
 
 ---
 
-# 📸 Screenshots
+# 📸 See Video of Project
 
-> Add screenshots of the web platform here.
-
+https://www.linkedin.com/posts/mohammed-mustafa-7b9321339_softwareengineering-csharp-dotnet-ugcPost-7427800717442117633-THKo
 ---
 
 # 📬 Contact
 
-- LinkedIn: Add your LinkedIn profile
-- GitHub: Add your GitHub profile
+- LinkedIn: https://www.linkedin.com/in/ahmed-esam-kamal/
+- GitHub: https://github.com/Ahmed-EsamCs
