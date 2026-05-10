@@ -1,0 +1,372 @@
+/* ------------------------ */
+/* Global 
+/* ------------------------ */
+:root {
+    --primary: #0059fd;
+    --secondary: #1e90d9;
+    --danger: #c20101;
+    --background: #c7f0ff;
+    --dark-light: #575757;
+    --heading-dark: #053559;
+    --primary-hover: hsl(219, 100%, 35%);
+    --secondary-hover: hsl(203, 100%, 60%);
+    --shadow-soft: 0 10px 8px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: aileron, sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #E0F7FA 0%, #B3E5FC 100%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-dark);
+    font-weight: 700 !important;
+}
+
+a, a:hover, a:visited {
+    text-decoration: none;
+}
+
+
+/* ------------------------ */
+/* Navbar 
+/* ------------------------ */
+.navbar {
+    box-shadow: var(--shadow-soft);
+}
+
+.navbar-brand {
+    color: var(--heading-dark);
+    font-weight: 900 !important;
+    font-size: xx-large;
+}
+
+    .navbar-brand:hover, .navbar-brand:focus {
+        color: var(--heading-dark);
+    }
+
+    .navbar-brand:focus {
+        outline-color: var(--secondary);
+    }
+
+.nav-item {
+    font-weight: 600;
+}
+
+@media (min-width: 992px) {
+    .nav-item {
+        margin: 0 20px;
+    }
+}
+
+.nav-link {
+    transition: 0.5s ease !important;
+}
+
+    .nav-link:hover {
+        color: var(--primary) !important;
+    }
+
+.navbar .active {
+    color: var(--primary) !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem var(--heading-dark);
+    border-color: var(--heading-dark);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2030%2030'%3E%3Cpath%20stroke='%23575757'%20stroke-linecap='round'%20stroke-miterlimit='10'%20stroke-width='2'%20d='M4%207h22%20M4%2015h22%20M4%2023h22'/%3E%3C/svg%3E") !important;
+}
+
+/* ------------------------ */
+/* Navbar Account Dropdown 
+/* ------------------------ */
+.account-dropdown {
+    font-weight: 600;
+}
+
+    .account-dropdown .dropdown-toggle {
+        color: var(--heading-dark);
+        transition: 0.3s ease;
+    }
+
+        .account-dropdown .dropdown-toggle:hover {
+            color: var(--primary);
+        }
+
+        .account-dropdown .dropdown-toggle::after {
+            font-size: 1.1rem;
+        }
+
+.dropdown-toggle i {
+    font-size: 1.3rem;
+}
+
+.account-dropdown .dropdown-item {
+    transition: 0.1s ease;
+}
+
+/* -------------------------------- */
+/* Homepage Hero Section 
+/* -------------------------------- */
+.hero {
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (min-width: 992px) {
+    .hero-header {
+        font-size: 45pt;
+    }
+}
+
+.hero-para {
+    font-weight: 500;
+}
+
+.hero-img {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 8px rgba(0,0,0,0.1);
+    transition: 0.5s ease;
+}
+
+    .hero-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-img:hover {
+        box-shadow: 0 20px 30px 10px rgba(0, 166, 255, 0.7);
+        transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+    }
+
+@media only screen and (min-width: 992px) {
+    .hero-btn {
+        max-width: 450px;
+    }
+}
+
+.hero-btn i {
+    font-size: 1.5rem;
+}
+
+/* -------------------------------- */
+/* Login and Registration Pages
+/* -------------------------------- */
+.login-section {
+    background-color: white;
+    background-image: url("../assets/background_white.svg");
+}
+
+.login-header {
+    color: var(--secondary);
+}
+
+.login-para {
+    font-weight: 600;
+    color: var(--dark-light);
+}
+
+.submit-btn {
+    width: 100%;
+}
+
+.signup-ad {
+    color: var(--heading-dark);
+}
+
+/* -------------------------------- */
+/* Pricing Page */
+/* -------------------------------- */
+.pricing-section {
+    background-color: #c4efff;
+    background-image: url("../assets/background_white.svg");
+}
+
+.pricing-card {
+    background-color: white;
+    transition: 0.5s ease;
+    box-shadow: 0px 20px 29px 0px rgba(101, 201, 255, 0.4), 0px 0px 29px 0px rgba(101, 201, 255, 0.5);
+    border-radius: 15px;
+}
+
+    .pricing-card:hover {
+        box-shadow: 0 20px 30px 15px rgba(0, 166, 255, 0.6);
+    }
+
+.features {
+    text-align: start;
+    list-style-type: none;
+    font-weight: 600;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+}
+
+    .feature i {
+        color: var(--secondary);
+        font-size: 1.2rem;
+    }
+/* ========================================= */
+/* About Page & Team Styling
+/* ========================================= */
+
+/* 1. Hero Section */
+.about-hero {
+    background: linear-gradient(135deg, #f8f9fa 0%, #eef6ff 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+   
+    .about-hero::before {
+        content: "";
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, rgba(13, 110, 253, 0.1) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+/* 2. Stats Cards */
+.stat-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border-bottom: 4px solid #0d6efd; 
+}
+
+    .stat-card:hover {
+        transform: translateY(-10px);
+    }
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0d6efd;
+    margin-bottom: 0.5rem;
+}
+
+/* 3. Team Cards */
+.team-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    text-align: center;
+    position: relative;
+    border: 1px solid #f0f0f0;
+    height: 100%;
+}
+
+    .team-card:hover {
+        transform: translateY(-10px); 
+        box-shadow: 0 20px 50px rgba(13, 110, 253, 0.15); 
+    }
+
+.team-img-wrapper {
+    height: 260px; 
+    overflow: hidden;
+    position: relative;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-img {
+    max-width: 80%;
+    transition: transform 0.5s ease; 
+}
+
+
+.team-card:hover .team-img {
+    transform: scale(1.1);
+}
+
+.team-social {
+    position: absolute;
+    bottom: -60px; 
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 0;
+    transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid #eee;
+}
+
+.team-card:hover .team-social {
+    bottom: 0;
+}
+
+.team-social a {
+    color: #053559;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+    .team-social a:hover {
+        color: #0d6efd;
+    }
+
+/* 4. Value Icons (Mission & Vision) */
+.value-icon {
+    width: 60px;
+    height: 60px;
+    background: #e6f2ff;
+    color: #0d6efd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* 5. Animation Classes */
+.animate-up {
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float-robot {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}

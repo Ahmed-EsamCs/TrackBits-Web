@@ -1,0 +1,39 @@
+﻿@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout) && parentLayout != null)
+    {
+        Layout = parentLayout.ToString();
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+<section class="py-5 manage-bg-section">
+    <div class="container">
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2 class="settings-header">Manage your account</h2>
+                <p class="settings-subtext">Change your account settings, password, and security preferences.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-4">
+                <partial name="_ManageNav" />
+            </div>
+
+            <div class="col-lg-9 col-md-8">
+                <div class="settings-content-card">
+                    @RenderBody()
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

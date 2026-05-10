@@ -1,0 +1,16 @@
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.pdb
+*.dll
+*.log
+*.tmp
+*.nupkg
+packages/
+project.assets.json
+appsettings.Development.json
+appsettings.json
+TrackBits/appsettings.json

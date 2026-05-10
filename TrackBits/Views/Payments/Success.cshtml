@@ -1,0 +1,68 @@
+﻿@model TrackBits.Models.Entities.SerialNumber
+
+<div class="confirm-wrapper d-flex justify-content-center align-items-center">
+    <div class="confirm-card p-5">
+        <div class="row align-items-center">
+            <!-- Robot Side -->
+            <div class="col-md-5 robot-side">
+                <img src="~/assets/robot.svg" alt="TrackBits Robot" class="robot-img">
+            </div>
+
+            <!-- Content Side -->
+            <div class="col-md-7 text-center text-md-start">
+                @if (Model != null)
+                {
+
+                    <h2 class="title mb-4">Payment Successful!</h2>
+                    <p class="desc mb-3">Your serial number has been generated successfully.</p>
+
+                    <div class="dev-box mx-auto mx-md-0">
+                        <strong>Your Serial Number:</strong>
+                        <div class="mt-2" style="font-family: monospace; font-size: 1.1rem; color: var(--primary); font-weight: 700;">
+                            @Model.HashedSerial
+                        </div>
+                    </div>
+
+                    <p class="desc mt-4 mb-3">
+                        <small> Please save this serial number. You'll need it to activate your subscription.</small>
+                    </p>
+
+                    <div class="d-flex justify-content-center justify-content-md-start mt-4">
+                        <a href="/" class="btn-primary text-decoration-none">
+                            Go to Dashboard
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <h2 class="title mb-4"> Payment Successful!</h2>
+                    <p class="desc mb-3">Thank you for your purchase! We're processing your serial number.</p>
+
+                    <div class="dev-box mx-auto mx-md-0">
+                        <p class="mb-2"> <strong>Check Your Email</strong></p>
+                        <p class="mb-0" style="font-size: 0.9rem;">
+                            We will send your serial number to your registered email address within a few minutes.
+                        </p>
+                    </div>
+
+                    <p class="desc mt-4" style="font-size: 0.95rem;">
+                        <em>Didn't receive the email? Please check your spam folder.</em>
+                    </p>
+
+                    <div class="d-flex justify-content-center justify-content-md-start mt-4">
+                        <a href="javascript:location.reload()" class="btn-primary text-decoration-none">
+                            <svg width="16" height="16" fill="currentColor" class="me-2" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                            </svg>
+                            Reload Page
+                        </a>
+                        <a href="/" class="btn-secondary text-decoration-none">
+                            Go Home
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

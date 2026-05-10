@@ -1,0 +1,65 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using TrackBits.Models.Entities
+@inject SignInManager<User> SignInManager
+<section class="container-fluid">
+    <div class="row min-vh-100 justify-content-center">
+        <div class="col pricing-section d-flex flex-column align-items-center text-center pt-4 pt-md-5">
+            <div class="pricing-card d-flex flex-column align-items-center text-center py-4 px-5 mb-5">
+                <!-- Headings -->
+                <h1 class="display-4 mb-1">Buy our App</h1>
+                <h2 class="login-header display-5 mt-3 mb-2">$3.99 / Month</h2>
+                <!-- Paragraph -->
+                <p class="login-para lead">Single Monthly Plan</p>
+                <!-- Features List -->
+                <ul class="features p-0">
+                    <li class="feature">
+                        <i class="me-2 bi bi-check-circle-fill"></i>
+                        Real-time Network Monitoring
+                    </li>
+                    <li class="feature">
+                        <i class="me-2 bi bi-check-circle-fill"></i>
+                        Advanced Usage Analytics
+                    </li>
+                    <li class="feature">
+                        <i class="me-2 bi bi-check-circle-fill"></i>
+                        Precise Cost Calculation
+                    </li>
+                    <li class="feature">
+                        <i class="me-2 bi bi-check-circle-fill"></i>
+                        Unlimited Data Tracking
+                    </li>
+                    <li class="feature">
+                        <i class="me-2 bi bi-check-circle-fill"></i>
+                        24/7 Support
+                    </li>
+                </ul>
+                <!-- Robot Image -->
+                <img src="~/assets/robot.svg" width="200" height="175">
+                <!-- Button -->
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <form asp-controller="Payments" asp-action="Subscribe" method="post">
+                        <button type="submit" id="paymentBtn" class="hero-btn btn-primary mt-4 mb-3 w-100 border-0 py-3 fs-5">
+                            <i class="bi bi-credit-card-fill me-3"></i>
+                            Proceed to Payment
+                        </button>
+                    </form>
+                }
+                else
+                {
+
+                    <a asp-area="Identity" asp-page="/Account/Login" class="hero-btn btn-secondary mt-4 mb-3">
+                        @* <i class="bi bi-credit-card-fill me-3"></i> *@
+                        <i class="bi bi-box-arrow-in-left me-3"></i>
+                        Sign in to Subscribe
+                    </a>
+
+
+                }
+
+
+
+            </div>
+        </div>
+    </div>
+</section>

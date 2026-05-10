@@ -1,0 +1,67 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+
+
+
+
+<section class="container-fluid">
+    <div class="row min-vh-100 justify-content-center">
+        <!-- Login Form (Left Side) -->
+        <div class="col login-section d-flex flex-column align-items-center text-center pt-4 pt-md-5">
+            <!-- App Brand -->
+            <div class="app-brand d-flex flex-column align-items-center">
+                <img src="~/assets/logo.svg" class="img-fluid mb-2" width="100" height="100">
+                <h3 class="brand-name display-6">TrackBiTs</h3>
+            </div>
+            <h2 class="login-header display-5 mt-3 mb-3">Sign In</h2>
+            <!-- Form -->
+            <form id="account" method="post" class="form d-flex justify-content-center align-items-center flex-column">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                <!-- Email Input -->
+                <div class="input-wrapper">
+
+                
+
+
+                    <input asp-for="Input.Email"  autocomplete="username" aria-required="true" class="input" type="email" name="email" id="email" placeholder="Email" required>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    <i class="bi bi-envelope"></i>
+                </div>
+                <!-- Password Input -->
+                <div class="input-wrapper">
+
+         
+
+                    <input asp-for="Input.Password"  autocomplete="current-password" aria-required="true" class="input" type="password" name="password" id="password" placeholder="Password" required>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    <i class="bi bi-lock"></i>
+                </div>
+                <!-- Forgot Password Link -->
+                <a id="forgot-password" class="text-link mb-4 mt-3" asp-page="./ForgotPassword">Forgot password?</a>
+
+                <!-- Submit Button -->
+
+                <button id="login-submit" class="btn-primary submit-btn" type="submit" ">Log in</button>
+
+                <!-- Go to Sign up -->
+                <div class="signup-ad d-flex mt-4">
+                    <p class="signup-span me-4 fw-semibold">Don't have an account?</p>
+
+                    <a class="text-link" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Sign Up</a>
+
+                </div>
+            </form>
+     
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,49 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Confirm your email";
+}
+
+<div class="confirm-wrapper d-flex flex-column align-items-center justify-content-center">
+
+    <div class="confirm-card d-flex flex-column flex-lg-row align-items-center p-4">
+
+        <!-- Left side: Robot Image -->
+        <div class="robot-side mb-4 mb-lg-0">
+            <img src="~/assets/robot.svg" alt="Robot" class="robot-img" />
+        </div>
+
+        <!-- Right side: Text + Button -->
+        <div class="text-side text-center d-flex flex-column align-items-center">
+
+            <img src="~/assets/logo.svg" width="120" class="mb-3" />
+
+            <h2 class="title mb-2">Almost there! </h2>
+
+            <p class="desc mb-3">
+                We’ve sent a confirmation link to your email address.<br />
+                Please check your inbox and click the activation link.
+            </p>
+
+
+            <div class="dev-box">
+                <strong>Enjoy !</strong><br />
+
+            </div>
+
+            @if (Model.DisplayConfirmAccountLink)
+            {
+                <div class="dev-box">
+                    <strong>Development mode:</strong><br />
+                    You can confirm your account manually:<br />
+
+                    <a class="btn-primary mt-3" href="@Model.EmailConfirmationUrl">Confirm Email</a>
+                </div>
+            }
+        </div>
+
+    </div>
+
+</div>
+
+

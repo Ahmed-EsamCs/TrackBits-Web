@@ -1,0 +1,59 @@
+﻿@page
+@model RegisterModel
+<section class="container-fluid">
+    <div class="row min-vh-100 justify-content-center">
+        <!-- Register Form (Left Side) -->
+        <div class="col login-section d-flex flex-column align-items-center text-center pt-4 pt-md-5">
+            <!-- App Brand -->
+            <div class="app-brand d-flex flex-column align-items-center">
+                <img src="~/assets/logo.svg" class="img-fluid mb-2" width="100" height="100">
+                <h3 class="brand-name display-6">TrackBiTs</h3>
+            </div>
+            <h2 class="login-header display-5 mt-3 mb-3">Sign Up</h2>
+            <!-- Form -->
+            <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form d-flex justify-content-center align-items-center flex-column">
+
+                <div class="validation-box" asp-validation-summary="ModelOnly"></div>
+
+                <!-- Name Input -->
+                <div class="input-wrapper">
+                    <input asp-for="Input.Username" autocomplete="username" aria-required="true" placeholder="Username" class="input" type="text"   required>
+                    <span asp-validation-for="Input.Username" class="text-danger"></span>
+                    <i class="bi bi-person"></i>
+                </div>
+                <!-- Email Input -->
+                <div class="input-wrapper">
+                    <input asp-for="Input.Email" autocomplete="username" aria-required="true" class="input" type="email"  placeholder="Email" required>
+                    <i class="bi bi-envelope"></i>
+                </div>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                <!-- Password Input -->
+                <div class="input-wrapper">
+                    <input asp-for="Input.Password" autocomplete="new-password" aria-required="true" class="input" type="password"   placeholder="Password" required>
+                    <i class="bi bi-lock"></i>
+                </div>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                <!-- Confirm Password Input -->
+                <div class="input-wrapper">
+                    <input asp-for="Input.ConfirmPassword" autocomplete="new-password" aria-required="true" class="input" type="password"  placeholder="Confirm Password" required>
+
+                    <i class="bi bi-lock"></i>
+                </div>
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                <!-- Submit Button -->
+                <button id="registerSubmit"  class="btn-primary submit-btn mt-4" type="submit">Sign Up</button>
+                <!-- Go to Sign in -->
+                <div class="signup-ad d-flex mt-4">
+                    <p class="signup-span me-4 fw-semibold">Already a user?</p>
+                    <a asp-page="/Account/Login" class="text-link" >Sign In</a>
+                </div>
+            </form>
+        </div>
+     
+    </div>
+</section>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

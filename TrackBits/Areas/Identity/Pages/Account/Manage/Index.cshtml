@@ -1,0 +1,82 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Profile";
+    ViewData["ActivePage"] = ManageNavPages.Index;
+}
+
+<h3 class="fw-bold text-primary mb-4">Profile</h3>
+
+<partial name="_StatusMessage" for="StatusMessage" />
+
+<div class="row">
+    <div class="col-md-8 col-lg-7">
+
+        <form id="profile-form" method="post">
+
+            <div asp-validation-summary="ModelOnly"
+                 class="text-danger mb-3"
+                 role="alert"></div>
+
+            <!-- Email (Read Only) -->
+            <div class="mb-3">
+                <label class="form-label fw-bold text-muted small ms-1">
+                    Email
+                </label>
+
+                <div class="input-wrapper">
+                    <input value="@Model.Username"
+                           class="input"
+                           disabled />
+                    <i class="bi bi-envelope-fill text-muted"></i>
+                </div>
+            </div>
+
+            <!-- Username (Editable) -->
+            <div class="mb-3">
+                <label asp-for="Input.BusinessUserName"
+                       class="form-label fw-bold text-muted small ms-1">
+                </label>
+
+                <div class="input-wrapper">
+                    <input asp-for="Input.BusinessUserName"
+                           class="input"
+                           placeholder="Enter your username" />
+                    <i class="bi bi-person-fill"></i>
+                </div>
+
+                <span asp-validation-for="Input.BusinessUserName"
+                      class="text-danger small"></span>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="mb-4">
+                <label asp-for="Input.PhoneNumber"
+                       class="form-label fw-bold text-muted small ms-1">
+                </label>
+
+                <div class="input-wrapper">
+                    <input asp-for="Input.PhoneNumber"
+                           class="input"
+                           placeholder="Enter your phone number" />
+                    <i class="bi bi-telephone"></i>
+                </div>
+
+                <span asp-validation-for="Input.PhoneNumber"
+                      class="text-danger small"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <button id="update-profile-button"
+                    type="submit"
+                    class="btn-primary w-100 py-2 fs-6 shadow-sm border-0">
+                Save Changes
+            </button>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

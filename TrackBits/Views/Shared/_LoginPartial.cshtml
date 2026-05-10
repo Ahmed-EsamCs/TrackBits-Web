@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using TrackBits.Models.Entities
+
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+
+
+@{
+    var currentUser = await UserManager.GetUserAsync(User);
+}
+
+    @if (SignInManager.IsSignedIn(User) && currentUser != null)
+    {
+        <div class="dropdown account-dropdown me-5">
+            <a id="account-name" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-circle me-1"></i>
+                @(string.IsNullOrEmpty(currentUser.BusinessUserName) ? currentUser.Email : currentUser.BusinessUserName)
+            </a>
+
+            <ul class="dropdown-menu">
+                <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index">Account Settings</a>
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <button type="submit" class="dropdown-item danger" style="cursor:pointer">Sign Out</button>
+                </form>
+            </ul>
+        </div>
+    }
+    else
+    {
+        <div class="navbar-btns d-flex">
+            <a class="btn-secondary" asp-area="Identity" asp-page="/Account/Login">Sign In</a>
+            <a class="btn-primary" asp-area="Identity" asp-page="/Account/Register">Sign Up</a>
+        </div>
+
+
+
+
+
+
+
+    }

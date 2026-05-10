@@ -1,0 +1,105 @@
+﻿@model List<TrackBits.Models.Entities.FaqViewModel>
+
+@{
+    ViewData["Title"] = "Support Center";
+}
+
+<section class="support-hero text-center">
+    <div class="container position-relative" style="z-index: 2;">
+        <h1 class="display-4 fw-bold mb-3">How can we help you?</h1>
+        <p class="lead mb-4 opacity-75">
+            Our team is dedicated to providing the best support for your network needs.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="get" asp-action="Support">
+                    <div class="input-group input-group-lg shadow-lg rounded-pill overflow-hidden">
+                        <span class="input-group-text border-0 bg-white ps-4">
+                            <i class="bi bi-search text-muted"></i>
+                        </span>
+                        <input type="text" name="query" value="@ViewData["CurrentQuery"]" class="form-control border-0" placeholder="Search for answers...">
+                        <button type="submit" class="btn btn-primary px-4 fw-bold">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+       
+
+<section class="container py-5">
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-5">
+            <a href="mailto:trackbits@outlook.com" class="text-decoration-none">
+                <div class="support-card">
+                    <div class="support-icon-box">
+                        <i class="bi bi-envelope-open-heart"></i>
+                    </div>
+                    <h3 class="fw-bold text-dark mb-2">Email Support</h3>
+                    <p class="text-muted mb-3">
+                        Have a complex inquiry? Drop us an email and we'll get back to you within 24 hours.
+                    </p>
+                    <span class="text-primary fw-bold fs-5">
+                        trackbits@outlook.com
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-5">
+            <div class="support-card card-disabled">
+                <span class="badge-coming-soon">Coming Soon</span>
+                <div class="support-icon-box">
+                    <i class="bi bi-chat-dots-fill"></i>
+                </div>
+                <h3 class="fw-bold text-dark mb-2">Live Chat</h3>
+                <p class="text-muted mb-3">
+                    We are building a real-time chat system to solve your network issues instantly.
+                </p>
+                <span class="text-muted fw-bold fs-5">
+                    Currently Unavailable
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5 mb-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-dark">Frequently Asked Questions</h2>
+        <p class="text-muted">Quick answers to common questions</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            @if (Model.Count == 0)
+            {
+                <div class="alert alert-warning text-center">
+                    No results found for "<strong>@ViewData["CurrentQuery"]</strong>". Try searching for something else.
+                </div>
+            }
+            else
+            {
+                <div class="accordion shadow-sm rounded-3 overflow-hidden" id="faqAccordion">
+                    @foreach (var faq in Model)
+                    {
+                        <div class="accordion-item border-0 border-bottom">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#@faq.Id">
+                                    @faq.Question
+                                </button>
+                            </h2>
+                            <div id="@faq.Id" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    @faq.Answer
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,52 @@
+﻿@page
+@model ConfirmEmailChangeModel
+@{
+    ViewData["Title"] = "Confirm Email Change";
+}
+
+<section class="container-fluid">
+    <div class="row min-vh-100 justify-content-center">
+
+        <div class="col login-section d-flex flex-column align-items-center text-center pt-4 pt-md-5">
+
+            <!-- Robot / Header Image -->
+            <div class="app-brand d-flex flex-column align-items-center">
+                <img src="~/assets/robot.svg"
+                     class="img-fluid mb-3"
+                     width="180"
+                     height="180"
+                     alt="Confirmation Robot">
+            </div>
+
+            <!-- Title -->
+            <h2 class="login-header display-5 mb-3">
+                Email Change Confirmation
+            </h2>
+
+            <!-- Status Message -->
+            <div class="w-100 mb-3">
+                <partial name="_StatusMessage" model="Model.StatusMessage" />
+            </div>
+
+            <!-- Description -->
+            <p class="login-para mb-4">
+                Your email address has been successfully verified and updated.
+                You can now continue using your account without interruption.
+            </p>
+
+            <!-- Actions -->
+            <div class="d-flex flex-column gap-3 w-100" style="max-width: 320px;">
+                <a asp-page="/Account/Manage/Index"
+                   class="btn-primary submit-btn">
+                    Go to Profile
+                </a>
+
+                <a asp-page="/Account/Login"
+                   class="text-link">
+                    Back to Login
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>

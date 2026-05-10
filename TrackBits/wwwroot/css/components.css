@@ -1,0 +1,707 @@
+﻿/* ---------------- */
+/* Reusable Components 
+/* ---------------- */
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border-radius: 9px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary:focus {
+    transform: scale(1.1);
+    outline: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--secondary);
+    border-radius: 9px;
+    padding: 10px 20px;
+    border: 2px solid var(--secondary);
+    font-weight: 600;
+    transition: 0.3s ease;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-secondary:focus {
+    transform: scale(1.1);
+    outline: none;
+}
+
+.btn-secondary:hover {
+    color: var(--secondary-hover);
+    border-color: var(--secondary-hover);
+}
+
+.danger {
+    color: var(--danger);
+}
+
+.danger:hover {
+    color: var(--danger);
+}
+
+.danger:active {
+    background-color: var(--danger);
+    color: white;
+}
+
+.input-wrapper {
+    position: relative;
+    min-width: 300px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.input {
+    border-radius: 8px;
+    padding: 10px 15px 10px 50px;
+    border: 2px solid #9d9d9d;
+    transition: 0.3s ease;
+    outline: none;
+    width: 100%;
+}
+
+.input:focus {
+    border-color: var(--secondary);
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);  
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+
+.text-link {
+    color: #3bbefb;
+    font-weight: 700;
+    font-size: large;
+    transition: 0.3s ease;
+}
+
+.text-link:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+.email-confirm-wrapper {
+    min-height: 75vh;
+    padding-top: 40px;
+}
+
+.email-card {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 35px 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+}
+
+.email-title {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.email-text {
+    color: var(--heading-dark);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.dev-mode-box {
+    background-color: #eef7ff;
+    border-left: 4px solid var(--secondary);
+    padding: 15px 12px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.email-btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 25px;
+    margin-top: 10px;
+    border-radius: 9px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+    .email-btn:hover {
+        background-color: var(--primary-hover);
+    }
+
+.validation-box {
+    width: 100%;
+    max-width: 350px;
+    background: #ffe5e5;
+    border-left: 4px solid var(--danger);
+    color: var(--danger);
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+
+
+.confirm-wrapper {
+    min-height: 80vh;
+    padding-top: 40px;
+}
+
+/* Card */
+.confirm-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    max-width: 850px;
+    width: 100%;
+}
+
+/* Robot */
+.robot-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.robot-img {
+    width: 260px;
+    height: auto;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.15));
+}
+
+/* Text area */
+.title {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.desc {
+    color: var(--heading-dark);
+    font-size: 1.1rem;
+}
+
+.dev-box {
+    background: #eef7ff;
+    border-left: 4px solid var(--secondary);
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 320px;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: var(--heading-dark);
+}
+
+.confirm-wrapper {
+    min-height: 80vh;
+    padding-top: 40px;
+}
+
+.confirm-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    max-width: 850px;
+    width: 100%;
+}
+
+.robot-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.robot-img {
+    width: 260px;
+    height: auto;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.15));
+}
+
+.title {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.desc {
+    color: var(--heading-dark);
+    font-size: 1.1rem;
+}
+
+.input-wrapper .text-danger {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--danger) !important;
+    padding-left: 5px;
+}
+/* Dark Footer */
+.tb-footer-dark {
+    background: #0a2342; 
+    color: #dce6f2;
+}
+
+    .tb-footer-dark .brand-text {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: white;
+    }
+
+.footer-desc {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    max-width: 300px;
+}
+
+.footer-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+
+    .footer-links a {
+        color: #b8c7d9;
+        text-decoration: none;
+        transition: 0.2s ease;
+    }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+/* Social Icons */
+.social-links a {
+    margin-right: 12px;
+    font-size: 1.25rem;
+    color: #dce6f2;
+    transition: 0.2s ease;
+}
+
+    .social-links a:hover {
+        color: var(--secondary);
+    }
+
+/* Line */
+.footer-divider {
+    border-color: rgba(255,255,255,0.1);
+}
+
+
+/* ========================================= */
+/* Features Section Styling
+/* ========================================= */
+
+.features-section {
+    background: linear-gradient(180deg, #f8f9fa 0%, #e6f2ff 100%); 
+    position: relative;
+    overflow: hidden;
+}
+
+/* Feature Card Design */
+.feature-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+    /* Glow Effect on Hover */
+    .feature-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 20px;
+        background: radial-gradient(circle at top right, rgba(13, 110, 253, 0.1), transparent 70%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        z-index: -1;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(13, 110, 253, 0.15); 
+        border-color: rgba(13, 110, 253, 0.2);
+    }
+
+        .feature-card:hover::after {
+            opacity: 1;
+        }
+
+/* Icon Styling */
+.feature-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #e0f2ff 0%, #ffffff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s ease;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.feature-card:hover .feature-icon-wrapper {
+    transform: scale(1.1) rotate(-5deg);
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+}
+
+.feature-card:hover .feature-icon {
+    -webkit-text-fill-color: #ffffff; 
+}
+
+/* Typography inside Card */
+.feature-title {
+    font-weight: 700;
+    color: #053559; 
+    margin-bottom: 1rem;
+}
+
+.feature-desc {
+    color: #6c757d;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Entrance Animation with Delay (Staggered) */
+.feature-col {
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+    .feature-col:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .feature-col:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .feature-col:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .feature-col:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+    .feature-col:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+
+    .feature-col:nth-child(6) {
+        animation-delay: 0.6s;
+    }
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================= */
+/* Support Page Styling
+/* ========================================= */
+
+/* Hero Section */
+.support-hero {
+    background: linear-gradient(135deg, #053559 0%, #0d6efd 100%);
+    color: white;
+    padding: 80px 0;
+    border-radius: 0 0 50px 50px; 
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/
+    .support-hero::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+    }
+
+    .support-hero::after {
+        content: "";
+        position: absolute;
+        bottom: -50px;
+        left: -50px;
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+    }
+
+/* Support Cards */
+.support-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+    .support-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(13, 110, 253, 0.12);
+        border-color: rgba(13, 110, 253, 0.3);
+    }
+
+.support-icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: #e6f2ff;
+    color: #0d6efd;
+    transition: all 0.3s ease;
+}
+
+.support-card:hover .support-icon-box {
+    background: #0d6efd;
+    color: #fff;
+    transform: rotateY(180deg); 
+}
+
+/* Coming Soon Style */
+.card-disabled {
+    opacity: 0.8;
+    background: #fcfcfc;
+    cursor: default;
+}
+
+    .card-disabled:hover {
+        transform: none;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        border-color: #f0f0f0;
+    }
+
+        .card-disabled:hover .support-icon-box {
+            background: #e6f2ff; 
+            color: #0d6efd;
+            transform: none;
+        }
+
+.badge-coming-soon {
+    background: #ffc107;
+    color: #000;
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
+}
+
+/* FAQ Accordion Customization */
+.accordion-button:not(.collapsed) {
+    background-color: #e6f2ff;
+    color: #0d6efd;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(13,110,253,.125);
+}
+
+
+/* ========================================= */
+/* Account Settings Sidebar
+/* ========================================= */
+
+.settings-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+    border: 1px solid #f0f0f0;
+}
+
+.settings-nav .nav-item {
+    margin-bottom: 0.5rem;
+}
+
+.settings-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: #575757; 
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+    .settings-link i {
+        font-size: 1.2rem;
+        margin-right: 12px;
+        color: #a0a0a0;
+        transition: color 0.3s ease;
+    }
+
+    /* Hover State */
+    .settings-link:hover {
+        background-color: #f0f8ff; 
+        color: var(--primary); 
+    }
+
+        .settings-link:hover i {
+            color: var(--primary);
+        }
+
+    /* Active State */
+    .settings-link.active {
+        background-color: var(--primary) !important;
+        color: #fff !important;
+        box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+    }
+
+        .settings-link.active i {
+            color: #fff !important;
+        }
+
+/* ========================================= */
+/* Account Settings Layout
+/* ========================================= */
+
+.settings-content-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 2.5rem; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    min-height: 100%; 
+}
+
+.settings-header {
+    color: #053559;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.settings-subtext {
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+/* ========================================= */
+/* Animated Background Section
+/* ========================================= */
+
+@keyframes float-robot {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-25px); 
+    }
+
+    100% {
+        transform: translateY(0px); 
+    }
+}
+
+
+.manage-bg-section {
+    position: relative;
+
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+    overflow: hidden; 
+    min-height: 90vh; 
+}
+
+    .manage-bg-section::before {
+        content: '';
+        position: absolute;
+   
+        top: 10px;
+        right: 20px;
+
+        width: 200px;
+        height: 200px;
+        background-image: url('/assets/robot.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.1; 
+        z-index: 0;
+        animation: float-robot 6s ease-in-out infinite;
+    }
+
+    .manage-bg-section .container {
+        position: relative;
+        z-index: 1;
+    }

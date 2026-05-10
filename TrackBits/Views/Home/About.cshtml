@@ -1,0 +1,174 @@
+﻿@{
+    ViewData["Title"] = "About Us";
+}
+
+<section class="about-hero">
+    <div class="container position-relative" style="z-index: 1;">
+        <div class="row align-items-center">
+            <div class="col-lg-6 animate-up">
+                <span class="text-primary fw-bold text-uppercase ls-2">Our Story</span>
+                <h1 class="display-4 fw-bold mb-4 mt-2">
+                    Empowering Networks, <br> <span class="text-primary">Everywhere.</span>
+                </h1>
+                <p class="lead text-muted mb-4">
+                    TrackBiTs started with a simple mission: to make network monitoring accessible, accurate, and easy for everyone. From small home offices to large enterprises, we provide the visibility you need.
+                </p>
+                <a asp-controller="Payments" asp-action="Payment" class="btn btn-primary btn-lg px-4 rounded-pill shadow-sm">
+                    Get Started
+                </a>
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0 text-center animate-up" style="animation-delay: 0.2s;">
+                <img src="~/assets/robot.svg" class="img-fluid" width="400" alt="About TrackBiTs" style="filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1)); animation: float-robot 6s infinite ease-in-out;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4 col-sm-6 animate-up" style="animation-delay: 0.3s;">
+                <div class="stat-card">
+                    <div class="stat-number">5+</div>
+                    <p class="text-muted fw-bold mb-0">Active Users</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 animate-up" style="animation-delay: 0.4s;">
+                <div class="stat-card">
+                    <div class="stat-number">99.9%</div>
+                    <p class="text-muted fw-bold mb-0">Uptime Guarantee</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 animate-up" style="animation-delay: 0.5s;">
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <p class="text-muted fw-bold mb-0">Expert Support</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" style="background-color: #fbfdff;">
+    <div class="container py-4">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 animate-up">
+                <img src="~/assets/logo.svg" class="img-fluid opacity-75" width="300" style="transform: rotate(-10deg);">
+            </div>
+            <div class="col-lg-6 animate-up" style="animation-delay: 0.2s;">
+                <div class="d-flex mb-4">
+                    <div class="flex-shrink-0">
+                        <div class="value-icon">
+                            <i class="bi bi-bullseye"></i>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1 ms-4">
+                        <h4 class="fw-bold">Our Mission</h4>
+                        <p class="text-muted">
+                            To simplify complex network data into actionable insights, helping users save money and optimize performance effortlessly.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="flex-shrink-0">
+                        <div class="value-icon">
+                            <i class="bi bi-lightbulb"></i>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1 ms-4">
+                        <h4 class="fw-bold">Our Vision</h4>
+                        <p class="text-muted">
+                            To become the global standard for personal and business network management tools, prioritizing privacy and precision.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" id="Career">
+    <div class="container py-4">
+        <div class="text-center mb-5 animate-up">
+            <h6 class="text-primary fw-bold text-uppercase">The Minds Behind TrackBiTs</h6>
+            <h2 class="fw-bold">Meet Our Team</h2>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-6 col-lg-3 animate-up" style="animation-delay: 0.2s;">
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <i class="bi bi-database-check" style="font-size: 5rem;"></i>
+                    </div>
+                    <div class="p-4">
+                        <h5 class="fw-bold mb-1">Ahmed Essam</h5>
+                        <p class="text-muted small mb-0">Backend Engineer</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 animate-up" style="animation-delay: 0.3s;">
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <div class="d-flex align-items-center justify-content-center h-100 bg-light">
+                            <i class="bi bi-window-stack" style="font-size: 5rem;"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h5 class="fw-bold mb-1">Abdelrahman Mohammed </h5>
+                        <p class="text-muted small mb-0">Desktop Developer</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-github"></i></a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 animate-up" style="animation-delay: 0.4s;">
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <div class="d-flex align-items-center justify-content-center h-100 bg-light">
+                            <i class="bi bi-robot" style="font-size: 5rem;"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h5 class="fw-bold mb-1">Ahmed Ashraf</h5>
+                        <p class="text-muted small mb-0">ML Engineer</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-github"></i></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 animate-up" style="animation-delay: 0.4s;">
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <div class="d-flex align-items-center justify-content-center h-100 bg-light">
+                            <i class="bi bi-brush-fill" style="font-size: 5rem;"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h5 class="fw-bold mb-1">Mohammed Mostafa</h5>
+                        <p class="text-muted small mb-0">UI/UX & Frontend Developer</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-github"></i></a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
